@@ -1,15 +1,17 @@
 const DocumentType = (props) => {
     const data = props.docTypes.map((item, index) => (
-        <a
-            key={index}
-            rel='nofollow noreferrer noopener'
-            href={`${props.president}/${item.toLowerCase().replaceAll(' ', '_')}`}>
-            {item}
-        </a>
+        <li key={index}>
+            <a
+                title={`${props.president}'s ${item}`}
+                rel='nofollow noreferrer noopener'
+                href={`${props.president}/${item.toLowerCase().replaceAll(' ', '_')}`}>
+                {item}
+            </a>
+        </li>
     ));
 
     return (
-        <div>{data}</div>
+        <ul>{data}</ul>
     )
 }
 

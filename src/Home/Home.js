@@ -29,12 +29,16 @@ const presidents = [
 const Home = () => {
 
     return (
-        <div>
-            <PresidentsList
-                presidents={presidents}
-                docTypes={DocumentTypes}>
-            </PresidentsList>
-        </div>
+        <section>
+            <div className="container px-8 pt-48 mx-auto lg:px-4">
+                <div className="flex flex-wrap text-left">
+                    <PresidentsList
+                        presidents={presidents}
+                        docTypes={DocumentTypes}>
+                    </PresidentsList>
+                </div>
+            </div>
+        </section>
     )
 }
 

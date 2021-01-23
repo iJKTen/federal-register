@@ -10,7 +10,7 @@ const Documents = lazy(() => import('../Documents'));
 
 function App() {
   return (
-    <div className="App">
+    <div className="md:container md:mx-auto">
       <header className="App-header">
       </header>
       <main>
