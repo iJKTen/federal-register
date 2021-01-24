@@ -10,8 +10,8 @@ const useHttp = (fn) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { statusCode, data } = await fn();
-            setDocuments(data)
+            const response = await fn();
+            setDocuments(response.data)
         }
 
         fetchData();
