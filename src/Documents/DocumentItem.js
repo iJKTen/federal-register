@@ -2,6 +2,7 @@ const DocumentItem = ({ document }) => {
     return (
         <div className='mt-4 text-secondary'>
             <a
+                title={document.title}
                 className='text-primary font-bold'
                 href={document.html_url}
                 target='blank'

@@ -15,7 +15,9 @@ function App() {
     <div>
       <header className='bg-color-three text-center pt-4 pb-4'>
         <h1 className='font-bold text-lg title-font lg:text-4xl'>
-          <a href='/'>
+          <a
+            title='Presidential Documents'
+            href='/'>
             Presidential Documents
           </a>
         </h1>

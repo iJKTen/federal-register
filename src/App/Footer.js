@@ -10,11 +10,13 @@ const Footer = () => {
                         About
                     </div>
                     <a
+                        title='faq'
                         href='/faq'
                         className='my-3 block text-color-one text-sm font-medium duration-700'>
                         FAQ
                     </a>
                     <a
+                        title='Source code'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//github.com/iJKTen/federal-register'
@@ -27,6 +29,7 @@ const Footer = () => {
                         Made With
                     </div>
                     <a
+                        title='Federal Register'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//www.federalregister.gov/reader-aids/developer-resources/rest-api'
@@ -34,6 +37,7 @@ const Footer = () => {
                         Federal Register
                     </a>
                     <a
+                        title='Tailwindcss'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//tailwindcss.com'
@@ -41,6 +45,7 @@ const Footer = () => {
                         Tailwindcss
                     </a>
                     <a
+                        title='React'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//reactjs.com'
@@ -48,6 +53,7 @@ const Footer = () => {
                         React
                     </a>
                     <a
+                        title='Netlify'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//netlify.com'
@@ -55,6 +61,7 @@ const Footer = () => {
                         Netlify
                     </a>
                     <a
+                        title='Happy Hues'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//www.happyhues.co/palettes/17'
@@ -68,6 +75,7 @@ const Footer = () => {
                         Other Projects
                     </div>
                     <a
+                        title='Can I wash my car?'
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//CanIWashMyCar.netlify.app'
@@ -81,6 +89,7 @@ const Footer = () => {
                         My Friend Jai
                     </div>
                     <a
+                        title="My friend Jai's Website"
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//MyFriendJai.com'
@@ -88,6 +97,7 @@ const Footer = () => {
                         Website
                     </a>
                     <a
+                        title="My friend jai's Music blog"
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//MusicFrom.MyFriendJai.com'
@@ -95,6 +105,7 @@ const Footer = () => {
                         Music blog
                     </a>
                     <a
+                        title="My friend Jai's Github"
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//github.com/iJKTen'
@@ -102,6 +113,7 @@ const Footer = () => {
                         GitHub
                     </a>
                     <a
+                        title="My friend Jai's Twitter"
                         target='_blank'
                         rel='nofollow noreferrer'
                         href='//twitter.com/MyFriendJai'
@@ -119,7 +131,7 @@ const Footer = () => {
                     </div>
                     <div className='md:flex-auto md:flex-row-reverse mt-2 flex-row flex'>
                         <a
-                            title='Twitter'
+                            title="My friend Jai's Twitter"
                             target='_blank'
                             rel='nofollow noreferrer'
                             href='//twitter.com/MyFriendJai'
@@ -128,7 +140,7 @@ const Footer = () => {
                                 icon={faTwitter}></FontAwesomeIcon>
                         </a>
                         <a
-                            title='Github'
+                            title="My friend Jai's Github"
                             target='_blank'
                             rel='nofollow noreferrer'
                             href='//github.com/iJKTen'

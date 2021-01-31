@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faInstagram, faWikipediaW } from '@fortawesome/free-brands-svg-icons';
+import { faBan } from '@fortawesome/free-solid-svg-icons';
 
 const PresidentInfo = ({ president, className }) => {
     return (
@@ -36,39 +37,60 @@ const PresidentInfo = ({ president, className }) => {
                                 size='4x'
                             />
                         </a>
-                        <a
-                            title='Twitter'
-                            className='w-1/4 text-center'
-                            target='_blank'
-                            rel='nofollow noreferrer'
-                            href={president.social.twitter}>
+                        {president.social.twitter === 'banned' ?
                             <FontAwesomeIcon
-                                icon={faTwitter}
+                                icon={faBan}
                                 size='4x'
                             />
-                        </a>
-                        <a
-                            title='Facebook'
-                            className='w-1/4 text-center'
-                            target='_blank'
-                            rel='nofollow noreferrer'
-                            href={president.social.facebook}>
+                            :
+                            <a
+                                title='Twitter'
+                                className='w-1/4 text-center'
+                                target='_blank'
+                                rel='nofollow noreferrer'
+                                href={president.social.twitter}>
+                                <FontAwesomeIcon
+                                    icon={faTwitter}
+                                    size='4x'
+                                />
+                            </a>
+                        }
+                        {president.social.facebook === 'banned' ?
                             <FontAwesomeIcon
-                                icon={faFacebook}
+                                icon={faBan}
                                 size='4x'
                             />
-                        </a>
-                        <a
-                            title='Instagram'
-                            className='w-1/4 text-center'
-                            target='_blank'
-                            rel='nofollow noreferrer'
-                            href={president.social.instagram}>
+                            :
+                            <a
+                                title='Facebook'
+                                className='w-1/4 text-center'
+                                target='_blank'
+                                rel='nofollow noreferrer'
+                                href={president.social.facebook}>
+                                <FontAwesomeIcon
+                                    icon={faFacebook}
+                                    size='4x'
+                                />
+                            </a>
+                        }
+                        {president.social.instagram === 'banned' ?
                             <FontAwesomeIcon
-                                icon={faInstagram}
+                                icon={faBan}
                                 size='4x'
                             />
-                        </a>
+                            :
+                            <a
+                                title='Instagram'
+                                className='w-1/4 text-center'
+                                target='_blank'
+                                rel='nofollow noreferrer'
+                                href={president.social.instagram}>
+                                <FontAwesomeIcon
+                                    icon={faInstagram}
+                                    size='4x'
+                                />
+                            </a>
+                        }
                     </div>
                 </div>
             </div>

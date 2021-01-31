@@ -93,8 +93,9 @@ const Presidents = [
         bio: 'Orange baby',
         social: {
             wikipedia: 'https://en.wikipedia.org/wiki/Bill_Clinton',
-            twitter: 'https://twitter.com/BillClinton',
-            facebook: 'https://www.facebook.com/billclinton'
+            twitter: 'banned',
+            facebook: 'banned',
+            instagram: 'banned'
 
         },
         documentsCount: {
