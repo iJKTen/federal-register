@@ -1,12 +1,18 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import DocumentYearFilter from './DocumentYearFilter';
+import SocialLink from './SocialLink';
 import { faTwitter, faFacebook, faInstagram, faWikipediaW } from '@fortawesome/free-brands-svg-icons';
 import { faBan } from '@fortawesome/free-solid-svg-icons';
 
 const PresidentInfo = ({ president, className }) => {
+
+    const yearsAsPresident = president.term.end - president.term.begin;
+    const years = Array.from({ length: yearsAsPresident + 1 }, (_, index) => index + president.term.begin);
+    const yearsPresident = ['All'].concat(years);
+
     return (
         <section className={`body-font ${className}`}>
             <div className="container flex flex-col items-center px-5 py-10 mx-auto lg:px-20 lg:py-10 md:flex-row">
-                <div className="w-1/5">
+                <div className="w-1/4">
                     <img
                         className="object-cover object-center rounded"
                         alt={president.displayName}
@@ -25,72 +31,36 @@ const PresidentInfo = ({ president, className }) => {
                     <p className="mb-8 text-base leading-relaxed text-center ray-700 lg:text-left lg:text-1xl">
                         {president.bio}
                     </p>
+                    <div>
+                        <DocumentYearFilter
+                            years={yearsPresident}
+                        />
+                    </div>
                     <div className="flex flex-wrap justify-between content-between w-1/2">
-                        <a
+                        <SocialLink
                             title='Wikipedia'
-                            className='w-1/4 text-center'
-                            target='_blank'
-                            rel='nofollow noreferrer'
-                            href={president.social.wikipedia}>
-                            <FontAwesomeIcon
-                                icon={faWikipediaW}
-                                size='4x'
-                            />
-                        </a>
-                        {president.social.twitter === 'banned' ?
-                            <FontAwesomeIcon
-                                icon={faBan}
-                                size='4x'
-                            />
-                            :
-                            <a
-                                title='Twitter'
-                                className='w-1/4 text-center'
-                                target='_blank'
-                                rel='nofollow noreferrer'
-                                href={president.social.twitter}>
-                                <FontAwesomeIcon
-                                    icon={faTwitter}
-                                    size='4x'
-                                />
-                            </a>
-                        }
-                        {president.social.facebook === 'banned' ?
-                            <FontAwesomeIcon
-                                icon={faBan}
-                                size='4x'
-                            />
-                            :
-                            <a
-                                title='Facebook'
-                                className='w-1/4 text-center'
-                                target='_blank'
-                                rel='nofollow noreferrer'
-                                href={president.social.facebook}>
-                                <FontAwesomeIcon
-                                    icon={faFacebook}
-                                    size='4x'
-                                />
-                            </a>
-                        }
-                        {president.social.instagram === 'banned' ?
-                            <FontAwesomeIcon
-                                icon={faBan}
-                                size='4x'
-                            />
-                            :
-                            <a
-                                title='Instagram'
-                                className='w-1/4 text-center'
-                                target='_blank'
-                                rel='nofollow noreferrer'
-                                href={president.social.instagram}>
-                                <FontAwesomeIcon
-                                    icon={faInstagram}
-                                    size='4x'
-                                />
-                            </a>
-                        }
+                            link={president.social.wikipedia}
+                            liveIcon={faWikipediaW}
+                            bannedIcon={faBan}
+                        />
+                        <SocialLink
+                            title='Twitter'
+                            link={president.social.twitter}
+                            liveIcon={faTwitter}
+                            bannedIcon={faBan}
+                        />
+                        <SocialLink
+                            title='Facebook'
+                            link={president.social.facebook}
+                            liveIcon={faFacebook}
+                            bannedIcon={faBan}
+                        />
+                        <SocialLink
+                            title='Instagram'
+                            link={president.social.instagram}
+                            liveIcon={faInstagram}
+                            bannedIcon={faBan}
+                        />
                     </div>
                 </div>
             </div>

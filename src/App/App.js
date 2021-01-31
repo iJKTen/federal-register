@@ -28,6 +28,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
               <Route path='/faq' component={FAQ} />
+              <Route path='/:president/:documentType/:year' component={Documents} />
               <Route path='/:president/:documentType' component={Documents} />
               <Route path='/' component={Home} />
             </Switch>

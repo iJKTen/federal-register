@@ -7,10 +7,11 @@ import PresidentInfo from './PresidentInfo';
 import { Presidents } from '../Data';
 
 const Documents = () => {
-    const { president, documentType } = useParams();
+    const { president, documentType, year } = useParams();
+
     const memoizedFn = useCallback(() => {
-        return GetDocuments(president, documentType)
-    }, [president, documentType]);
+        return GetDocuments(president, documentType, year)
+    }, [president, documentType, year]);
     const documents = useHttp(memoizedFn);
 
     const currentPresident = Presidents.filter(p => p.url === president)[0];
