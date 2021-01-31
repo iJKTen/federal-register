@@ -3,6 +3,7 @@ const DocumentType = (props) => {
         return (
             <li key={index}>
                 <a
+                    className='text-secondary'
                     title={`${props.president}'s ${item}`}
                     rel='nofollow noreferrer noopener'
                     href={`${props.president}/${item.toLowerCase().replaceAll(' ', '_')}`}>

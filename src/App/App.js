@@ -13,15 +13,15 @@ const FAQ = lazy(() => import('../FAQ'));
 function App() {
   return (
     <div>
-      <header className='text-center'>
-        <h1 className='font-bold text-lg title-font lg:text-4xl mt-4'>
+      <header className='bg-color-three text-center pt-4 pb-4'>
+        <h1 className='font-bold text-lg title-font lg:text-4xl'>
           <a href='/'>
             Presidential Documents
           </a>
         </h1>
         <p>Presidential documents signed since 1994</p>
       </header>
-      <main className='md:container md:mx-auto'>
+      <main>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>

@@ -1,7 +1,8 @@
 const DocumentItem = ({ document }) => {
     return (
-        <div className='mb-4'>
+        <div className='mt-4 text-secondary'>
             <a
+                className='text-primary font-bold'
                 href={document.html_url}
                 target='blank'
                 rel='nofollow noreferrer noopener'>

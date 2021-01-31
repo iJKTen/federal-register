@@ -1,7 +1,6 @@
 import DocumentItem from './DocumentItem';
 
 const DocumentsList = ({ documents }) => {
-    console.log(documents)
     const documentsData = documents.map((item, index) => (
         <DocumentItem
             key={index}
@@ -10,7 +9,9 @@ const DocumentsList = ({ documents }) => {
     ));
 
     return (
-        <div>{documentsData}</div>
+        <div>
+            {documentsData}
+        </div>
     )
 }
 

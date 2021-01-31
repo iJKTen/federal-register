@@ -24,7 +24,7 @@ const Presidents = [
             'Presidential Order': 0,
             Proclamation: 606
         },
-        party: 'Democrat'
+        party: 'democrat'
     },
     {
         url: 'george-w-bush',
@@ -51,7 +51,7 @@ const Presidents = [
             'Presidential Order': 0,
             Proclamation: 941
         },
-        party: 'Republican'
+        party: 'republican'
     },
     {
         url: 'barack-obama',
@@ -79,7 +79,7 @@ const Presidents = [
             'Presidential Order': 1,
             Proclamation: 1228
         },
-        party: 'Democrat'
+        party: 'democrat'
     },
     {
         url: 'donald-trump',
@@ -105,7 +105,7 @@ const Presidents = [
             'Presidential Order': 2,
             Proclamation: 570
         },
-        party: 'Republican'
+        party: 'republican'
     },
     {
         url: 'joe-biden',
@@ -133,7 +133,7 @@ const Presidents = [
             'Presidential Order': null,
             Proclamation: null
         },
-        party: 'Democrat'
+        party: 'democrat'
     }
 ];
 

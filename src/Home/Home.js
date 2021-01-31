@@ -4,7 +4,7 @@ import { Presidents, DocumentTypes } from '../Data';
 const Home = () => {
 
     return (
-        <section>
+        <section className='bg-color-one'>
             <div className="container px-8 pt-10 mx-auto lg:px-4">
                 <div className="flex flex-wrap text-left">
                     <PresidentsList
