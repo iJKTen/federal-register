@@ -84,7 +84,7 @@ const Presidents = [
     {
         url: 'donald-trump',
         displayName: 'Orange Baby',
-        imgUrl: '//www.solidbackgrounds.com/images/1280x1024/1280x1024-burnt-orange-solid-color-background.jpg',
+        imgUrl: '//cdn.cnn.com/cnnnext/dam/assets/190702170740-trump-baby-balloon-washington-permit-july-fourth-lead-vpx-00000529.jpg',
         term: {
             begin: 2017,
             end: 2021
