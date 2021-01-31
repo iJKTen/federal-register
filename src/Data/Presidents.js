@@ -92,7 +92,7 @@ const Presidents = [
         vicePresident: 'Mike Pence',
         bio: 'Orange baby',
         social: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Bill_Clinton',
+            wikipedia: 'https://en.wikipedia.org/wiki/Donald_Trump',
             twitter: 'banned',
             facebook: 'banned',
             instagram: 'banned'
