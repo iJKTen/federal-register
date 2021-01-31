@@ -14,7 +14,7 @@ const Documents = () => {
     const documents = useHttp(memoizedFn);
 
     const currentPresident = Presidents.filter(p => p.url === president)[0];
-    //<div className="container px-8 mx-auto lg:px-4">
+
     return (
         <section>
             <div>
