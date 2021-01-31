@@ -3,15 +3,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import Footer from './Footer';
 const Home = lazy(() => import('../Home'));
 const Documents = lazy(() => import('../Documents'));
+const FAQ = lazy(() => import('../FAQ'));
 
 function App() {
   return (
-    <div className="md:container md:mx-auto">
+    <div>
       <header className='text-center'>
         <h1 className='font-bold text-lg title-font lg:text-4xl mt-4'>
           <a href='/'>
@@ -20,12 +21,13 @@ function App() {
         </h1>
         <p>Presidential documents signed since 1994</p>
       </header>
-      <main>
+      <main className='md:container md:mx-auto'>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
-              <Route path="/:president/:documentType" component={Documents} />
-              <Route path="/" component={Home} />
+              <Route path='/faq' component={FAQ} />
+              <Route path='/:president/:documentType' component={Documents} />
+              <Route path='/' component={Home} />
             </Switch>
           </Suspense>
         </Router>

@@ -17,7 +17,7 @@ const Documents = () => {
 
     return (
         <section>
-            <div className="container px-8 pt-10 mx-auto lg:px-4">
+            <div className="container px-8 mx-auto lg:px-4">
                 <PresidentInfo
                     president={currentPresident}
                 />
