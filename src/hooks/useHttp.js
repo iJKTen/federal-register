@@ -11,7 +11,9 @@ const useHttp = (fn) => {
     useEffect(() => {
         const fetchData = async () => {
             const response = await fn();
-            setDocuments(response.data)
+            if (response.data.count > 1) {
+                setDocuments(response.data);
+            }
         }
 
         fetchData();

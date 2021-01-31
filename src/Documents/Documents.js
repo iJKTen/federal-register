@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useHttp } from '../hooks';
 import DocumentsList from './DocumentsList';
 import { GetDocuments } from './DocumentsAPI';
+import PresidentInfo from './PresidentInfo';
+import { Presidents } from '../Data';
 
 const Documents = () => {
     const { president, documentType } = useParams();
@@ -10,10 +12,15 @@ const Documents = () => {
         return GetDocuments(president, documentType)
     }, [president, documentType]);
     const documents = useHttp(memoizedFn);
-    console.log(documents)
+
+    const currentPresident = Presidents.filter(p => p.url === president)[0];
+
     return (
         <section>
-            <div className="container px-8 pt-48 mx-auto lg:px-4">
+            <div className="container px-8 pt-10 mx-auto lg:px-4">
+                <PresidentInfo
+                    president={currentPresident}
+                />
                 <h1 className='mb-3 text-lg font-bold text-gray-700 lg:text-2xl title-font'>
                     {documents.description}
                 </h1>

@@ -5,13 +5,20 @@ import {
   Route
 } from "react-router-dom";
 
+import Footer from './Footer';
 const Home = lazy(() => import('../Home'));
 const Documents = lazy(() => import('../Documents'));
 
 function App() {
   return (
     <div className="md:container md:mx-auto">
-      <header className="App-header">
+      <header className='text-center'>
+        <h1 className='font-bold text-lg title-font lg:text-4xl mt-4'>
+          <a href='/'>
+            Presidential Documents
+          </a>
+        </h1>
+        <p>Presidential documents signed since 1994</p>
       </header>
       <main>
         <Router>
@@ -23,7 +30,7 @@ function App() {
           </Suspense>
         </Router>
       </main>
-      <footer></footer>
+      <Footer></Footer>
     </div>
   );
 }
