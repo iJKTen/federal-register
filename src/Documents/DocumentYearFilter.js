@@ -20,7 +20,7 @@ const DocumentYearFilter = ({ years }) => {
 
         return (
             <a
-                className='px-1bg-color-one'
+                className='px-1 bg-color-one'
                 title={`Filter document by ${year}`}
                 key={year}
                 href={`${urlPath}/${year}`}>
