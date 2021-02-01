@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 const DocumentYearFilter = ({ years }) => {
 
@@ -20,7 +20,7 @@ const DocumentYearFilter = ({ years }) => {
 
         return (
             <a
-                className='px-1'
+                className='px-1bg-color-one'
                 title={`Filter document by ${year}`}
                 key={year}
                 href={`${urlPath}/${year}`}>
