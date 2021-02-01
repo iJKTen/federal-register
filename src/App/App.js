@@ -18,10 +18,11 @@ function App() {
           <a
             title='Presidential Documents'
             href='/'>
-            Presidential Documents
+            <span className='text-democrat'>Presidential</span>&nbsp;
+            <span className='text-republican'>Documents</span>
           </a>
         </h1>
-        <p>Presidential documents signed since 1994</p>
+        <p className='text-primary'>Presidential documents signed since 1994</p>
       </header>
       <main>
         <Router>
