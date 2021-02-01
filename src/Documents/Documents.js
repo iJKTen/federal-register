@@ -19,10 +19,11 @@ const Documents = () => {
     return (
         <section>
             <div>
-                <PresidentInfo
-                    className='bg-color-one'
-                    president={currentPresident}
-                />
+                <section className='body-font bg-color-one'>
+                    <PresidentInfo
+                        president={currentPresident}
+                    />
+                </section>
                 <section className='bg-color-two pt-8'>
                     <div className='container px-8 mx-auto lg:px-4'>
                         <h1 className='mb-3 text-lg font-bold text-primary lg:text-2xl title-font'>
