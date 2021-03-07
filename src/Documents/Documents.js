@@ -1,37 +1,52 @@
-import { useCallback } from 'react';
+import { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
-import { useHttp } from '../hooks';
 import DocumentsList from './DocumentsList';
 import { GetDocuments } from './DocumentsAPI';
-import PresidentInfo from './PresidentInfo';
+import PresidentHeader from './PresidentHeader';
 import { Presidents } from '../Data';
+import { useQuery } from 'react-query';
 
 const Documents = () => {
     const { president, documentType, year } = useParams();
 
-    const memoizedFn = useCallback(() => {
-        return GetDocuments(president, documentType, year)
-    }, [president, documentType, year]);
-    const documents = useHttp(memoizedFn);
-
     const currentPresident = Presidents.filter(p => p.url === president)[0];
+
+    const { status, data, error } = useQuery(['GetDocuments', president, documentType, year],
+        async () => await GetDocuments(president, documentType, year));
+
+    if (status === 'loading') {
+        return (
+            <div>Loading...</div>
+        )
+    }
+
+    if (status === 'error') {
+        return (
+            <div>{error.message}</div>
+        )
+    }
+
+    const PresidentHeaderComponent = <PresidentHeader
+        currentPresident={currentPresident}
+        description={data.description} />;
+
+    if (data.count === 0) {
+        return (
+            <Fragment>
+                {PresidentHeaderComponent}
+            </Fragment>
+        )
+    }
 
     return (
         <section>
             <div>
-                <section className='body-font bg-color-one'>
-                    <PresidentInfo
-                        president={currentPresident}
-                    />
-                </section>
-                <section className='bg-color-two pt-8'>
+                {PresidentHeaderComponent}
+                <section className='bg-color-two'>
                     <div className='container px-8 mx-auto lg:px-4'>
-                        <h1 className='mb-3 text-lg font-bold text-primary lg:text-2xl title-font'>
-                            {documents.description}
-                        </h1>
                         <hr className='mb-4' />
                         <DocumentsList
-                            documents={documents.results}>
+                            documents={data.results}>
                         </DocumentsList>
                     </div>
                 </section>
